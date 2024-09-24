@@ -4,5 +4,6 @@ __pycache__/
 *.h5
 *.joblib
 *.log
+*.pkl
 venv/
 .env

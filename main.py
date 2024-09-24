@@ -4,6 +4,7 @@ from pydantic import BaseModel
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import load_model
 import pickle
 
 # Cargar el tokenizer guardado
@@ -14,7 +15,7 @@ with open('tokenizer.pickle', 'rb') as handle:
 app = FastAPI()
 
 # 1. Cargar el modelo entrenado
-model = tf.keras.models.load_model('lstm_sentiment_model.h5')
+model = load_model('lstm_sentiment_model.h5')
 
 # 2. Definir el tamaño máximo de secuencia y vocabulario (debe ser consistente con el entrenamiento)
 max_len = 200

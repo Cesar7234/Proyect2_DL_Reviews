@@ -65,5 +65,17 @@ README.md: Documentación del proyecto.
 requirements.txt: Dependencias del proyecto.
 test_reviews/: Carpeta con ejemplos de reseñas para probar la API (opcional).
 
+## Uso con Docker
+
+Para ejecutar este proyecto usando Docker:
+
+1. Descarga la imagen:
+docker push cesar723/fastapi-model:tagname
+
+2. Ejecuta el contenedor:
+docker run -d -p 8000:8000 cesar723/fastapi-model 
+
+3. Accede a la API en `http://localhost:8000/docs`
+
 Licencia
 Este proyecto está bajo la licencia MIT.
